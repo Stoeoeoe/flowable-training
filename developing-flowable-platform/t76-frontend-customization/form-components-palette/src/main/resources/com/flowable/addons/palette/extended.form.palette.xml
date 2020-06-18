@@ -1,0 +1,56 @@
+<palette xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="flowable-extended-form-palette"
+         xmlns="http://www.edorasware.com/schema/vis/palette" xsi:schemaLocation="http://www.edorasware.com/schema/vis/palette
+         http://www.edorasware.com/schema/vis/edoras-vis-form-palette-2.0.63.xsd" apply-patch-to-palette="flowable-form-palette,flowable-page-palette"
+         resource-bundle="com/flowable/addons/palette/i18n/translation-extensions">
+
+    <!-- Here you add icons and form preview shapes -->
+    <component-presentations base-palette-icon-path="component-presentations/palette-icons" base-editor-view-path="component-presentations/editor-views">
+        <component-presentation id="star-rating-component.presentation" palette-icon-path="stars.png" palette-big-icon-path="stars.png"
+                                editor-view-path="chart.view.svg"/>
+        <component-presentation id="json-tree-component.presentation" palette-icon-path="tree.png" palette-big-icon-path="stars.png"
+                                editor-view-path="json-tree.view.svg"/>
+    </component-presentations>
+
+    <!-- These are the palettes for custom form components -->
+    <group id="formExtensions" index="99">
+        <!-- Star Rating -->
+        <component id="star-rating-component" ref="base-component" presentation-id="star-rating-component.presentation" xmltag="starRatingComponent">
+            <layout type="layout.form.controls" min-width="25" min-height="52" min-control-width="150" min-control-height="52" offset-x="10" offset-y="0"/>
+            <attribute id="value"/>
+            <attribute id="stars" path="extraSettings.stars"/>
+        </component>
+
+        <!-- JSON Tree -->
+        <component id="json-tree-component" ref="base-component" presentation-id="json-tree-component.presentation" xmltag="jsonTreeComponent">
+            <layout type="layout.form.controls" min-width="25" min-height="52" min-control-width="150" min-control-height="52" offset-x="10" offset-y="0"/>
+            <attribute id="value"/>
+            <attribute id="color" path="extraSettings.color"/>
+        </component>
+
+        <!-- JSON Data Source-->
+        <component id="rest-datasource-component" ref="base-component" presentation-id="star-rating-component.presentation" xmltag="restDataSource">
+            <layout type="layout.form.controls" min-width="25" min-height="52" min-control-width="150" min-control-height="52" offset-x="10" offset-y="0"/>
+            <attribute id="value"/>
+            <attribute id="url" path="extraSettings.dataurl"/>
+        </component>
+
+        <!-- Tiles -->
+        <component id="tile-component" ref="base-component" presentation-id="star-rating-component.presentation" xmltag="tile">
+            <layout type="layout.form.controls" min-width="25" min-height="52" min-control-width="150" min-control-height="52" offset-x="10" offset-y="0"/>
+            <attribute id="value"/>
+            <attribute id="orientation" value="row" path="extraSettings.orientation" category="edoras"/>
+            <attribute id="tiles" type="Complex" value="" runtime="false" path="extraSettings.tiles" category="edoras" index="2">
+                <complex-items>
+                    <complex-item id="text" type="SimpleTextExpression" width="300" value="" optional="false"/>
+                    <complex-item id="value" type="SimpleTextExpression" width="300" value="" optional="true"/>
+                </complex-items>
+            </attribute>
+        </component>
+
+        <component id="my-test-component" ref="base-component" presentation-id="star-rating-component.presentation" xmltag="myTestComponent">
+            <layout type="layout.form.controls" min-width="25" min-height="52" min-control-width="150" min-control-height="52" offset-x="10" offset-y="0"/>
+            <attribute id="whatWorld" type="SimpleTextExpression" path="extraSettings.world"/>
+        </component>
+
+    </group>
+</palette>

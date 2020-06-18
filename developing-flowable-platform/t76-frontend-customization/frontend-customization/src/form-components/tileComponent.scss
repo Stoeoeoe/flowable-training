@@ -1,0 +1,54 @@
+// Default: #4c5e84
+// Hover/Disabled: #394764
+// Selected: #001950
+
+.tile-container {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-start;
+
+  cursor: pointer;
+
+  .flw__tile {
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+
+    flex: 1 1 0;
+    flex-grow: 1;
+    margin:10px;
+    align-self: stretch;
+    background-color: #4c5e84;
+    color: white;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #394764;
+      box-shadow: 0 0 5px #cccccc;
+    }
+
+
+    &--selected {
+      background-color: #001950;
+      &:hover {
+        background-color: #001950;
+      }
+    }
+
+    &--disabled {
+      color: #878a8b;
+      cursor: not-allowed;
+      background-color: #383f4d;
+      &:hover {
+        background-color: #383f4d;
+      }
+    }
+
+
+  }
+}
+

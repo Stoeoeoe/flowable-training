@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.flowable.training.dp</groupId>
+    <artifactId>developing-with-flowable-platform</artifactId>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
+
+
+    <modules>
+        <module>0-flowable-work-base</module>
+        <module>0-flowable-work-autoconfig</module>
+        <module>0-flowable-engage-autoconfig</module>
+        <!--<module>1-flowable-design</module>-->
+        <!-- TODO
+        <module>t11-work-with-indices/flowableworkindexing-app</module>
+        -->
+        <module>t13-data-object-engine</module>
+        <module>t22-integrate-with-externals-systems</module>
+        <module>t42-hello-world</module>
+        <module>t31-configuring-flowable</module>
+        <module>t32-testing-flowable-apps</module>
+        <module>t51-exception-handling</module>
+        <module>t55-custom-service-tasks-and-palettes</module>
+        <module>t56-hooks-and-listeners</module>
+        <module>t60-bpmn-technical-foundations</module>
+        <module>t61-cmmn-technical-foundations</module>
+        <module>t62-dmn-technical-foundations</module>
+        <module>t74-template-engine</module>
+        <module>t78-creating-fe-app-with-forms/flowable-formscustomapp-app</module>
+        <module>t76-frontend-customization</module>
+        <!-- <module>t99-misc</module> -->
+        <module>t100-engage-training</module>
+        <module>0-support</module>
+        <!--
+        <module>X-externalapp</module>
+        -->
+    </modules>
+
+    <name>Developing with Flowable Platform</name>
+    <description>Examples and exercises for Developing with Flowable Platform</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+
+        <flowable.version>3.6.3</flowable.version>
+        <awaitility.version>3.1.5</awaitility.version>
+
+        <spring.datasource.url>jdbc:h2:~/flowable-db/flowable-training/${project.artifactId}/db;AUTO_SERVER=TRUE;DB_CLOSE_DELAY=-1</spring.datasource.url>
+        <flowable.indexing.indexNamePrefix>training.${project.artifactId}.</flowable.indexing.indexNamePrefix>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.flowable</groupId>
+                <artifactId>flowable-platform-bom</artifactId>
+                <version>${flowable.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.awaitility</groupId>
+                <artifactId>awaitility</artifactId>
+                <version>${awaitility.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>properties-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>write-project-properties</goal>
+                        </goals>
+                        <configuration>
+                            <outputFile>
+                                ${project.build.outputDirectory}/flowable-platform-training-module.properties
+                            </outputFile>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>flowable</id>
+            <name>libs-release</name>
+            <url>https://repo.flowable.com/libs-release-local</url>
+        </repository>
+    </repositories>
+</project>

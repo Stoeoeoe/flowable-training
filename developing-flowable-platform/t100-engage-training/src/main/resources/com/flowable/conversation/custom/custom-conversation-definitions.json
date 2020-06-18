@@ -1,0 +1,42 @@
+[
+  {
+    "key": "conv-coffee-break",
+    "name": "Coffee Break Chat",
+    "description": "A conversation to plan coffee (or tea) breaks.",
+    "type": "discussion",
+    "forms": {
+      "init": "F1_coffeeBreakInitForm"
+    },
+    "actionPermissions": {
+      "create": [
+        "flowableUser"
+      ],
+      "edit": [
+        "owner"
+      ],
+      "archive": [
+        "owner"
+      ]
+    }
+  },
+  {
+    "key": "conv-class-room",
+    "name": "Class Room Chat",
+    "description": "A conversation to discuss course content.",
+    "type": "discussion",
+    "forms": {
+      "init": "F2_classRoomInitForm"
+    },
+    "actionPermissions": {
+      "create": [
+        "flowableUser"
+      ],
+      "edit": [
+        "owner"
+      ],
+      "archive": [
+        "owner"
+      ]
+    }
+  }
+]

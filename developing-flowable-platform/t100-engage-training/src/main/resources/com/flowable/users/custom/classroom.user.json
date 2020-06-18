@@ -1,0 +1,223 @@
+[
+    {
+      "key": "user-teacher",
+      "name": "Teacher User",
+      "description": "Creates a new teacher.",
+      "initialUserSubType": "user",
+      "initialState": "ACTIVE",
+      "initialSubState": "ACTIVE",
+      "forms": {
+        "init": "F01_userInitFormDefault",
+        "view": "F02_userViewFormDefault",
+        "edit": "F03_userEditFormDefault"
+      },
+      "memberGroups": [
+        "flowableUser",
+        "flowableAdministrator",
+        "teacherUser"
+      ],
+      "lookupGroups":[
+        "flowableUser"
+      ],
+      "actionPermissions": {
+        "create": [ "flowableAdministrator"],
+        "edit": [ "flowableAdministrator" ],
+        "deactivate": [ "flowableAdministrator" ],
+        "activate": [ "flowableAdministrator" ]
+      },
+      "initialVariables": {
+        "adminUser": true
+      },
+      "conversationFilters": [ "all" ],
+      "contactFilters": [ "all", "active", "inactive" ],
+      "allowedFeatures": [
+        "contacts",
+        "editContactAvatar",
+        "changeOwnPassword",
+        "createUser",
+        "changeContactPassword",
+        "work",
+        "createWork",
+        "cases",
+        "processes",
+        "reports",
+        "reportsMetrics",
+        "tasks",
+        "templateManagement",
+        "actuators",
+        "audioMessage",
+        "bubbles",
+        "cases",
+        "changeContactPassword",
+        "changeOwnPassword",
+        "clearMessage",
+        "contacts",
+        "createConversation",
+        "createUser",
+        "createWork",
+        "editContactAvatar",
+        "editConversationAvatar",
+        "editMessage",
+        "editOwnAvatar",
+        "emojiPicker",
+        "fileUpload",
+        "inputValidation",
+        "markdownInput",
+        "processes",
+        "reports",
+        "reportsMetrics",
+        "sendMessageFromProfile",
+        "slashActions",
+        "tasks",
+        "templateManagement",
+        "videoMessage",
+        "websockets",
+        "work",
+        "actuators",
+        "user-mgmt"
+      ]
+    },
+  {
+    "key": "user-student",
+    "name": "Student User",
+    "description": "Creates a new student.",
+    "initialUserSubType": "user",
+    "initialState": "ACTIVE",
+    "initialSubState": "ACTIVE",
+    "forms": {
+      "init": "F01_userInitFormDefault",
+      "view": "F02_userViewFormDefault",
+      "edit": "F03_userEditFormDefault"
+    },
+    "memberGroups": [
+      "flowableUser",
+      "studentUser"
+    ],
+    "lookupGroups":[
+      "flowableUser"
+    ],
+    "actionPermissions": {
+      "create": [ "flowableAdministrator"],
+      "edit": [ "flowableAdministrator" ],
+      "deactivate": [ "flowableAdministrator" ],
+      "activate": [ "flowableAdministrator" ]
+    },
+    "initialVariables": {
+      "adminUser": true
+    },
+    "conversationFilters": [ "all" ],
+    "contactFilters": [ "all", "active", "inactive" ],
+    "allowedFeatures": [
+      "contacts",
+      "editContactAvatar",
+      "changeOwnPassword",
+      "work",
+      "createWork",
+      "cases",
+      "processes",
+      "tasks",
+      "templateManagement",
+      "actuators",
+      "audioMessage",
+      "bubbles",
+      "clearMessage",
+      "contacts",
+      "createConversation",
+      "createUser",
+      "createWork",
+      "editContactAvatar",
+      "editConversationAvatar",
+      "editMessage",
+      "editOwnAvatar",
+      "emojiPicker",
+      "fileUpload",
+      "inputValidation",
+      "markdownInput",
+      "processes",
+      "sendMessageFromProfile",
+      "slashActions",
+      "tasks",
+      "templateManagement",
+      "videoMessage",
+      "websockets",
+      "work",
+      "user-mgmt"
+    ]
+  },
+  {
+    "key": "admin-flowable",
+    "name": "Flowable Administration User",
+    "description": "Creates Flowable administration user.",
+    "initialUserSubType": "admin",
+    "initialState": "ACTIVE",
+    "initialSubState": "ACTIVE",
+    "forms": {
+      "init": "F01_userInitFormDefault",
+      "view": "F02_userViewFormDefault",
+      "edit": "F03_userEditFormDefault"
+    },
+    "memberGroups": [
+      "flowableUser",
+      "flowableAdministrator"
+    ],
+    "lookupGroups": [
+      "flowableUser",
+      "flowableAdministrator"
+    ],
+    "actionPermissions": {
+      "create": ["flowableAdministrator"],
+      "edit": ["flowableAdministrator"],
+      "deactivate": ["flowableAdministrator"],
+      "activate": ["flowableAdministrator"]
+    },
+    "initialVariables": {
+      "description": "Admin"
+    },
+    "conversationFilters": ["all"],
+    "contactFilters": ["all", "active", "inactive"],
+    "allowedFeatures": [
+      "contacts",
+      "editContactAvatar",
+      "changeOwnPassword",
+      "createUser",
+      "changeContactPassword",
+      "work",
+      "createWork",
+      "cases",
+      "processes",
+      "reports",
+      "reportsMetrics",
+      "tasks",
+      "templateManagement",
+      "actuators"
+    ]
+  },
+  {
+    "key": "user-bot",
+    "name": "A bot user",
+    "description": "Creates a new user for a bot.",
+    "initialUserType": "bot",
+    "initialState": "ACTIVE",
+    "initialSubState": "ACTIVE",
+    "forms": {
+      "init": "F01_userInitFormDefault",
+      "view": "F02_userViewFormDefault",
+      "edit": "F03_userEditFormDefault"
+    },
+    "memberGroups": [
+      "flowableUser",
+      "engageChatbot"
+    ],
+    "lookupGroups":[
+      "flowableUser"
+    ],
+    "actionPermissions": {
+      "create": [ "flowableAdministrator" ],
+      "edit": [ "flowableAdministrator" ],
+      "deactivate": [ "flowableAdministrator" ],
+      "activate": [ "flowableAdministrator" ]
+    },
+    "contactFilters": [ "all" ],
+    "allowedFeatures": [ "conversations", "websockets", "contacts", "createConversation", "bubbles", "sendMessageFromProfile", "emojiPicker", "markdownInput", "replyToMessage", "forwardMessage", "reactToMessage", "documents", "lastReadAvatars", "snooze" ]
+  }
+]

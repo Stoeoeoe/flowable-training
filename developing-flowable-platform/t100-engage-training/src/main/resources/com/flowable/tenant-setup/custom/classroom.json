@@ -1,0 +1,70 @@
+{
+  "name": "Classroom Tenant",
+  "groups": [
+    {"key": "teacherUser", "name": "Teacher"},
+    { "key": "studentUser", "name": "Student"},
+    { "key": "flowableUser", "name": "Flowable User" },
+    { "key": "flowableAdministrator", "name": "Flowable Administrator" },
+    { "key": "engageChatbot", "name": "Engage Chatbot" }
+  ],
+  "users": [
+    {
+      "firstName": "Flowable",
+      "lastName": "Admin",
+      "login": "admin",
+      "email": "admin@demo.flowable.com",
+      "language": "en",
+      "theme": "flowable",
+      "userDefinitionKey": "admin-flowable"
+    },
+    {
+      "firstName": "Digital",
+      "lastName": "Assistant",
+      "login": "digital.assistant",
+      "email": "digital-assistant@demo.flowable.io",
+      "language": "en",
+      "type": "bot",
+      "theme": "flowable",
+      "memberGroups": [
+        "engageChatbot"
+      ],
+      "userDefinitionKey": "user-bot",
+      "avatarResource": "classpath:/com/flowable/tenant-setup/default/avatars/digital-assistant.png"
+    },
+    {
+      "firstName": "Chat",
+      "lastName": "Bot",
+      "login": "chat.bot",
+      "email": "test@demo.flowable.io",
+      "language": "en",
+      "type": "bot",
+      "theme": "flowable",
+      "memberGroups": [
+        "engageChatbot"
+      ],
+      "userDefinitionKey": "user-bot",
+      "avatarResource": "classpath:/com/flowable/tenant-setup/default/avatars/digital-assistant.png"
+    },
+    {
+      "firstName": "Teacher",
+      "lastName": "User",
+      "login": "teacher",
+      "email": "teacher@demo.flowable.io",
+      "language": "en",
+      "theme": "flowable",
+      "userDefinitionKey": "user-teacher",
+      "avatarResource": "classpath:/com/flowable/tenant-setup/custom/avatars/teacher.jpeg"
+    },
+    {
+      "firstName": "Student",
+      "lastName": "User",
+      "login": "student",
+      "email": "student@demo.flowable.io",
+      "language": "en",
+      "theme": "flowable",
+      "userDefinitionKey": "user-student",
+      "avatarResource": "classpath:/com/flowable/tenant-setup/custom/avatars/student.jpeg"
+    }
+
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "rows": [
+    {
+      "cols": [
+        {
+          "designInfo": {
+            "bounds": {
+              "upperLeft": {
+                "x": 15,
+                "y": 25
+              },
+              "lowerRight": {
+                "x": 492,
+                "y": 73
+              }
+            },
+            "stencilSuperIds": [
+              "base-single-select",
+              "Component"
+            ],
+            "stencilId": "cloud-single-select",
+            "customStencilId": null
+          },
+          "type": "select",
+          "extraSettings": {
+            "tagsEnabled": false,
+            "preselectAll": false,
+            "enableAutocomplete": false,
+            "autocompleteMinLength": 1,
+            "dataSource": "Static",
+            "items": [
+              {
+                "text": "Building ABC",
+                "value": "Building ABC"
+              },
+              {
+                "text": "Building XYZ",
+                "value": "Building XYZ"
+              }
+            ],
+            "linkTargetView": "browse",
+            "storage": "Id",
+            "identity": "value",
+            "linkTarget": "_blank",
+            "multi": false
+          },
+          "enabled": true,
+          "i18n": {
+            "en_us": {
+              "extraSettings": {
+                "items": [
+                  {
+                    "text": "Building ABC",
+                    "value": "Building ABC"
+                  },
+                  {
+                    "text": "Building XYZ",
+                    "value": "Building XYZ"
+                  }
+                ]
+              },
+              "label": "Building"
+            }
+          },
+          "labelAlign": "top",
+          "value": "{{building}}",
+          "size": 6,
+          "ignore": false,
+          "visible": true,
+          "isRequired": false,
+          "label": "Building",
+          "id": "single-select1"
+        },
+        {
+          "designInfo": {
+            "bounds": {
+              "upperLeft": {
+                "x": 507,
+                "y": 25
+              },
+              "lowerRight": {
+                "x": 984,
+                "y": 73
+              }
+            },
+            "stencilSuperIds": [
+              "base-text",
+              "Component"
+            ],
+            "stencilId": "cloud-text",
+            "customStencilId": null
+          },
+          "type": "text",
+          "placeholder": "Pantry on second floor",
+          "i18n": {
+            "en_us": {
+              "placeholder": "Pantry on second floor",
+              "label": "Exact Location"
+            }
+          },
+          "labelAlign": "top",
+          "value": "{{exactLocation}}",
+          "size": 6,
+          "ignore": false,
+          "visible": true,
+          "enabled": true,
+          "isRequired": false,
+          "label": "Exact Location",
+          "id": "text1"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "designInfo": {
+            "bounds": {
+              "upperLeft": {
+                "x": 15,
+                "y": 98
+              },
+              "lowerRight": {
+                "x": 984,
+                "y": 146
+              }
+            },
+            "stencilSuperIds": [
+              "base-multi-select",
+              "Component"
+            ],
+            "stencilId": "cloud-multi-select",
+            "customStencilId": null
+          },
+          "type": "select",
+          "extraSettings": {
+            "tagsEnabled": false,
+            "preselectAll": false,
+            "enableAutocomplete": true,
+            "autocompleteMinLength": 1,
+            "dataSource": "Rest",
+            "queryUrl": "{{endpoints.idm}}/users/{{$item.id}}",
+            "lookupUrl": "{{endpoints.idm}}/users",
+            "path": "data",
+            "linkTargetView": "browse",
+            "storage": "Id",
+            "identity": "value",
+            "linkUrl": "{{endpoints.idm}}/users/{{$item.id}}",
+            "linkTarget": "_self",
+            "multi": true
+          },
+          "enabled": true,
+          "labelAlign": "top",
+          "value": "{{participantIds}}",
+          "size": 12,
+          "ignore": false,
+          "visible": true,
+          "isRequired": false,
+          "label": "Coffee Break Participants",
+          "i18n": {
+            "en_us": {
+              "label": "Coffee Break Participants"
+            }
+          },
+          "id": "multi-select1"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "designInfo": {
+            "bounds": {
+              "upperLeft": {
+                "x": 15,
+                "y": 171
+              },
+              "lowerRight": {
+                "x": 984,
+                "y": 181
+              }
+            },
+            "stencilSuperIds": [
+              "Hline"
+            ],
+            "stencilId": "cloud-hline",
+            "customStencilId": null
+          },
+          "type": "hline",
+          "labelAlign": "top",
+          "size": 12,
+          "ignore": false,
+          "visible": true,
+          "enabled": true,
+          "isRequired": false,
+          "id": "hline1"
+        }
+      ]
+    },
+    {
+      "cols": [
+        {
+          "designInfo": {
+            "bounds": {
+              "upperLeft": {
+                "x": 15,
+                "y": 201
+              },
+              "lowerRight": {
+                "x": 492,
+                "y": 249
+              }
+            },
+            "stencilSuperIds": [
+              "base-single-select",
+              "Component"
+            ],
+            "stencilId": "cloud-single-select",
+            "customStencilId": null
+          },
+          "type": "select",
+          "extraSettings": {
+            "tagsEnabled": false,
+            "preselectAll": false,
+            "enableAutocomplete": false,
+            "autocompleteMinLength": 1,
+            "dataSource": "Static",
+            "items": [
+              {
+                "text": "Arabica",
+                "value": "Arabica"
+              },
+              {
+                "text": "Robusta",
+                "value": "Robusta"
+              },
+              {
+                "text": "Liberica",
+                "value": "Liberica"
+              },
+              {
+                "text": "Other",
+                "value": "Other"
+              }
+            ],
+            "linkTargetView": "browse",
+            "storage": "Id",
+            "identity": "value",
+            "linkTarget": "_blank",
+            "multi": false
+          },
+          "enabled": true,
+          "i18n": {
+            "en_us": {
+              "extraSettings": {
+                "items": [
+                  {
+                    "text": "Arabica",
+                    "value": "Arabica"
+                  },
+                  {
+                    "text": "Robusta",
+                    "value": "Robusta"
+                  },
+                  {
+                    "text": "Liberica",
+                    "value": "Liberica"
+                  },
+                  {
+                    "text": "Other",
+                    "value": "Other"
+                  }
+                ]
+              },
+              "label": "Coffee Type"
+            }
+          },
+          "labelAlign": "top",
+          "value": "{{coffeeType}}",
+          "size": 6,
+          "ignore": false,
+          "visible": true,
+          "isRequired": false,
+          "label": "Coffee Type",
+          "id": "single-select3"
+        },
+        {
+          "designInfo": {
+            "bounds": {
+              "upperLeft": {
+                "x": 507,
+                "y": 201
+              },
+              "lowerRight": {
+                "x": 984,
+                "y": 249
+              }
+            },
+            "stencilSuperIds": [
+              "base-checkbox",
+              "Component"
+            ],
+            "stencilId": "cloud-checkbox",
+            "customStencilId": null
+          },
+          "type": "boolean",
+          "labelAlign": "top",
+          "value": "{{cakeAvailable}}",
+          "defaultValue": false,
+          "size": 6,
+          "ignore": false,
+          "visible": true,
+          "enabled": true,
+          "isRequired": false,
+          "label": "Cake available?",
+          "i18n": {
+            "en_us": {
+              "label": "Cake available?"
+            }
+          },
+          "id": "checkbox1"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "key": "F2_classRoomInitForm",
+    "name": "Class Room Chat Init Form",
+    "description": "",
+    "version": "2",
+    "type": "2"
+  }
+}

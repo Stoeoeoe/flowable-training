@@ -1,0 +1,28 @@
+{
+  "name": "frontend-customization",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "rollup -c && cpx \"dist/*\" \"../flowable-work-customized/src/main/resources/static/ext\"",
+    "prettier": "prettier --config node_modules/@flowable/work-scripts/.prettierrc --write \"./src/**/*.{json,scss,ts,tsx}\"",
+    "start": "flowbuild watch",
+    "watch": "rollup -cw"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "insert-css": "^2.0.0",
+    "react-json-view": "^1.19.1",
+    "react-star-rating-input": "^8.0.1",
+    "react-star-wars-crawl": "^2.0.0",
+    "react-twitter-embed": "^2.0.8",
+    "scriptjs": "^2.5.9"
+  },
+  "devDependencies": {
+    "@flowable/work-scripts": "1.0.6",
+    "cpx": "1.5.0",
+    "node-sass": "4.12.0",
+    "rollup": "^1.23.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-replace": "^2.2.0"
+  }
+}
